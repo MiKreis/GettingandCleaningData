@@ -1,0 +1,54 @@
+---
+title: "Codebook.Rmd"
+author: "MiKreis"
+date: "16 4 2021"
+output: html_document
+---
+
+
+## Codebook: Human Activity Recognition Using Smartphones Data Set - Means of Means and Standard Deviations
+
+This Codebook describes the rows and columns of the two datasets processeddata.txt and MeansbySubjectandActivity.txt produced from the above mentioned data for the Coursera course work. First, the columns are described which are intentionally kept (almost) the same for the (intermediate) dataset processeddata.txt and the final dataset MeansbySubjectandActivity.txt. To avoid confusion: Please note, however, that the difference in the rows is important here. While in processeddata.txt every entry is a (mean or std of a) normalized measurment, in MeansbySubjectandActivity.txt is every entry is a mean of a certain set of entries from processeddata.txt.
+
+## Columns
+
+Every column (except for the last two: Activity and Subject.ID) represents one modularly built-up variable that takes numeric values between -1 and 1. Each of these consists of at least four mandatory parts (Prefix, Acceleration, Source and Type) and possibly further optional parts. The last two columns (only in processeddata.txt) indicate the respective activity and test subject (see below).
+
+
+# Prefix
+(1) t - *indicates time domain signals* <br>
+(2) f - *indicates frequency domain signals* <br>
+
+# Acceleration
+(1) Body - *indicates an acceleration signal for the test subjects body* <br>
+(2) Gravity - *indicates an acceleration signal for gravity* <br>
+
+# Source
+(1) Acc[elerometer] - *the data was measured by the devices accelerometer* <br>
+(2) Gyro[scope] - *the data was measured by the devices gyroscope* <br>
+
+# Type 
+(1) mean - *the column represents the mean of the respective data* <br>
+(2) std - *the column represents the standard derivation of the respective data* <br>
+
+# Optional
+(1) Jerk - *a Jerk Signal, obtained by deriving the body linear acceleration adn angular velocity in time* <br>
+(2) Mag[nitude] - *Magnitude classification of the signal by taking the Euclidean norm* <br>
+(3) X,Y,Z - *indicates a certain fixed direction* <br>
+
+# Additional Columns
+Note that these two columns are given for every observation in the processeddata.txt dataset, but only there.
+
+(1) Activity - *indicates the activity during the measurement* <br>
+              1 WALKING <br>
+              2 WALKING UPSTAIRS <br>
+              3 WALKING DOWNSTAIRS <br>
+              4 SITTING  <br>
+              5 STANDING <br>
+              6 LAYING <br>
+              
+(2) Subject.ID - *represents the unique ID of one of 30 test subjects* <br>              
+
+## Rows
+
+In processeddata.txt each of the 10299 rows simply represents an (enumerated) observation. In MeansbySubjectandActivity.txt every row stands for one activity of one test subject and the rows entries are the respective means of the entries of processeddata.txt for that person and activity.

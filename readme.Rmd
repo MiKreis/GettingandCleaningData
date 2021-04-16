@@ -1,0 +1,24 @@
+---
+title: "readme.Rmd"
+author: "MiKreis"
+date: "16 4 2021"
+output: html_document
+---
+
+
+
+
+The main dataset at hand (MeansbySubjectandActivity.txt) is a processed subset of the Dataset *Human Activity Recognition Using Smartphones* (J.L. Reyes-Ortiz et.al. (2012)). Formally, it is created by running the function run_analysis.R (see Github Repository: https://github.com/MiKreis/GettingandCleaningData) on the original data. Contentwise, it consists of the means of all columns from the original data representing means or standard deviations (columns), for each activity of every test subject (rows).
+
+# The repository includes:
+
+readme.Rmd - This readme-file
+
+processeddata.txt - The first dataset for the coursera course work: A tidy data.frame containing 10299 observations of 68 variables, providing a systematized and tidy overview of both test and training data from the original dataset.
+
+MeansbySubjectandActivity.txt - The second dataset for the coursera course work: A tidy data.frame containing 180 observations of 66 variables, listing the mean of the columns from processeddata.txt for each activity of every subject.
+
+run_analysis.R - A R-code-file including the processing function, to produce processeddata.txt and MeansbySubjectandActivity.txt from the original data.
+
+Codebook.Rmd - A Description of the Rows and Columns in processeddata.txt and MeansbySubjectandActivity.txt.
+
